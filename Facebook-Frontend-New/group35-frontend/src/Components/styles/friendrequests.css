@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f7;
+  }
+  
+  .friend-requests-container {
+    padding-top: 70px;  /* Add padding to avoid content being hidden under fixed navbar */
+    display: flex;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 70px);  /* Full height minus navbar */
+    position: fixed;  /* Fixed position */
+    top: 70px;
+    left: 0;
+  }
+  
+  .sidebar h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar ul li svg {
+    margin-right: 10px;
+  }
+  
+  /* Friend Requests Body */
+  .friend-requests-body {
+    margin-left: 270px;  /* Width of sidebar plus some margin */
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .friend-requests-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .friend-request-card {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .friend-request-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .friend-request-card .card-body {
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+  }
+  
+  .confirm-btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .delete-btn {
+    margin-top: 10px;
+    background-color: gray;
+    border-color: gray;
+  }
+  
+  @media (max-width: 768px) {
+    .friend-requests-body {
+      margin-left: 0;
+      padding: 10px;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 10px;
+    }
+  
+    .friend-requests-list {
+      justify-content: center;
+    }
+  
+    .friend-request-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  

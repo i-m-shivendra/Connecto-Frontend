@@ -1,0 +1,162 @@
+/* Reset margin and padding for the body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overall Container */
+.login-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6f7;
+    font-family: Arial, sans-serif;
+    padding: 20px; /* Ensure spacing for small screens */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Branding Section */
+.login-brand {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-brand h1 {
+    font-size: 3rem;
+    color: #3b5998;
+    margin: 0;
+}
+
+.login-brand p {
+    font-size: 1.2rem;
+    color: #606770;
+    margin-top: 5px;
+}
+
+/* Login Box Section */
+.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Restrict maximum width */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+/* Header in Login Box */
+.login-box h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #1c1e21;
+}
+
+/* Input Fields */
+.login-box input {
+    width: 100%;
+    padding: 12px; /* Increase padding */
+    margin-bottom: 15px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.login-box input:focus {
+    border-color: #1877f2;
+    outline: none;
+}
+
+/* Buttons */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.login-button:hover {
+    background-color: #145dbf;
+}
+
+.create-account-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #42b72a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create-account-button:hover {
+    background-color: #36a420;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 12px;
+    margin: -10px 0 10px 0;
+}
+
+/* Separator */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #dddfe2;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-box {
+        width: 90%; /* Take up most of the screen on smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-brand h1 {
+        font-size: 2.5rem;
+    }
+
+    .login-brand p {
+        font-size: 1rem;
+    }
+}

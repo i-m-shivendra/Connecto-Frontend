@@ -1,0 +1,260 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+}
+
+.user-posts-container {
+  padding-top: 70px; /* Avoid content hidden under navbar */
+  display: flex;
+  justify-content: center; /* Center align the posts */
+}
+
+/* Navbar styles */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the navbar is on top */
+  position: fixed; /* Fixes the navbar at the top */
+  width: 100%; /* Ensures the navbar spans the full width */
+  top: 0; /* Keeps it at the top of the page */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 70px); /* Full height minus navbar */
+  position: fixed;
+  top: 70px;
+  left: 0;
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li svg {
+  margin-right: 10px;
+}
+
+.posts-body {
+  margin-left: 270px; /* Width of sidebar */
+  padding: 150px 20px 20px; /* Increased padding to top for visibility */
+  flex: 1;
+  max-width: 700px; /* Max width for the posts body */
+  position: relative;
+  background-color: #f5f6f7;
+  z-index: 1; /* Ensure the posts are below the navbar */
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center align the title */
+  margin-top: 0; /* Remove additional margin */
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  margin: 20px 0; /* Increased margin for better spacing */
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.post-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  margin-left: 10px; /* Remove margin between profile picture and username */
+  display: inline-block;
+}
+
+.post-content p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.post-image {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.separator {
+  width: 100%;
+  border-top: 2px solid #000;
+  margin: 10px 0;
+}
+
+.post-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-button .like-text {
+  margin-left: 8px; /* Added gap between icon and text */
+}
+
+.like-button.liked {
+  color: #007bff;
+}
+
+.comment-section {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-section textarea {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 10px;
+  resize: none;
+}
+
+.comment-section .send-comment {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.comment-section .send-comment:hover {
+  background-color: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-button.active {
+  background-color: #0056b3;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+.all-comments.hidden {
+  display: none;
+}
+
+.all-comments {
+  margin-top: 10px;
+}
+
+.send-comment-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: gray;
+}
+
+.send-comment-button:hover {
+  color: blue;
+}
+
+/* New styles for update post button */
+.update-post-button {
+  background: none;
+  margin-left: 300px;
+  cursor: pointer;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.update-post-button:hover {
+  color: #007bff;
+  align-self: flex-end;
+}
+
+.delete-post-button{
+  background: none;
+  margin-left: -5px;
+  cursor: pointer;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.delete-post-button:hover{
+  color: #007bff;
+  align-self: flex-end;
+}

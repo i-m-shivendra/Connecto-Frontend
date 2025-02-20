@@ -1,0 +1,126 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f5f6f7;
+}
+
+.friend-profile-container {
+  padding-top: 70px; /* Add padding to avoid content being hidden under fixed navbar */
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 70px); /* Full height minus navbar */
+  position: fixed; /* Fixed position */
+  top: 70px;
+  left: 0;
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li svg {
+  margin-right: 10px;
+}
+
+/* Friend Profile Body */
+.friend-profile-body {
+  margin-left: 270px; /* Width of sidebar plus some margin */
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  align-items: center; /* Center the card vertically */
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-actions {
+  margin-top: 10px;
+}
+
+.profile-actions .btn {
+  margin: 5px;
+}
+
+.profile-content {
+  margin-top: 20px;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab-button:hover {
+  text-decoration: underline;
+}
+
+.tab-content {
+  /* Add styles for tab content here */
+}
+
+@media (max-width: 768px) {
+  .friend-profile-body {
+    margin-left: 0;
+    padding: 10px;
+    justify-content: center; /* Center the card horizontally */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+}
